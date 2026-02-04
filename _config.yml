@@ -1,0 +1,19 @@
+title: "Wordcrafted"
+email: "your-email@example.com"
+description: "English MA — copywriting, content strategy, translations (EN/NO), short comics and educational content."
+baseurl: "" # leave empty for a user site: https://wordcrafted.github.io
+url: "https://wordcrafted.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+collections:
+  portfolio:
+    output: true
+  comics:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
