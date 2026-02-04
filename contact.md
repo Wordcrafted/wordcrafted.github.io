@@ -4,7 +4,7 @@ title: "Contact"
 permalink: /contact/
 ---
 
-Want to work together? Email me at your-email@example.com or use the form below.
+Want to work together? Email me at wordcrafted@outlook.com or use the form below.
 
 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
   <label>Name</label><br/>
