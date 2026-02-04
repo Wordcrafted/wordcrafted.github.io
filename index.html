@@ -5,6 +5,14 @@ permalink: /
 
 # Words that convert. Stories that teach.
 
-English MA & content creator — copywriting, translations (NO↔EN), educational content, comics, and shortform multimedia for teams and brands.
+English MA & content creator — copywriting, translations (NO↔EN), educational content, comics, and shortform multimedia.
 
 [View portfolio](/portfolio/) • [Read the blog](/blog/) • [Contact](/contact/)
+
+## Latest posts
+
+<ul>
+{% for post in site.posts limit:5 %}
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <small>— {{ post.date | date: "%Y-%m-%d" }}</small></li>
+{% endfor %}
+</ul>
