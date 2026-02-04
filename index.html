@@ -1,18 +1,30 @@
 ---
+layout: home
 title: "Wordcrafted"
 permalink: /
 ---
 
-# Words that convert. Stories that teach.
+<section class="hero">
+  <div class="wrap">
+    <h1>Words that convert. Stories that teach.</h1>
+    <p class="lede">English MA & content creator — copywriting, translations (NO↔EN), educational content, comics, and shortform multimedia.</p>
+    <p><a class="btn" href="/blog/">Read the blog</a> <a class="btn ghost" href="/portfolio/">See portfolio</a></p>
+  </div>
+</section>
 
-English MA & content creator — copywriting, translations (NO↔EN), educational content, comics, and shortform multimedia.
-
-[View portfolio](/portfolio/) • [Read the blog](/blog/) • [Contact](/contact/)
-
-## Latest posts
-
-<ul>
-{% for post in site.posts limit:5 %}
-  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <small>— {{ post.date | date: "%Y-%m-%d" }}</small></li>
-{% endfor %}
-</ul>
+<section class="featured wrap">
+  <h2>Latest posts</h2>
+  <div class="cards">
+    {% for post in site.posts limit:3 %}
+      <article class="card">
+        {% if post.image %}
+          <a href="{{ post.url | relative_url }}"><img src="{{ post.image | relative_url }}" alt="{{ post.title }}"></a>
+        {% endif %}
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p class="meta">{{ post.date | date: "%Y-%m-%d" }}</p>
+        <p>{{ post.excerpt | strip_html | truncate:160 }}</p>
+      </article>
+    {% endfor %}
+  </div>
+  <p><a href="/blog/">View all posts →</a></p>
+</section>
